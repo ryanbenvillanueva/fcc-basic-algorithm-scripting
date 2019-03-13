@@ -4,9 +4,10 @@
     box-sizing: border-box;
 }
 
-#title {
+header, footer, #convertToF {
     text-align: center;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
