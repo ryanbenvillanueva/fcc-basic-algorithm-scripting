@@ -22,7 +22,7 @@
         </header>
         <main>
             <section class="container text-center" id="convertToF">
-                <div class="card py-3">
+                <div class="card py-3 mb-3">
                     <h2>Convert Celsius to Fahrenheit</h2>
                     <p>Type the temperature value to be converted: </p>
                     <input class="text-center mx-auto my-0" type="number" pattern="[-+]?[0-9]*[.,]?[0-9]+" onkeyup="convertToF(this.value)"
@@ -31,6 +31,17 @@
                     <p>is equal to</p>
                     <span id="fahrenheit"> </span>
                     <span>&#8457;.</span>
+                </div>
+            </section>
+            <section class="container text-center" id="convertToF">
+                <div class="card py-3 mb-3">
+                    <h2>Reverse a String</h2>
+                    <p>Type a string to be reversed:</p>
+                    <input class="text-center mx-auto my-0 d-block w-75" type="text" onkeyup="reverseString(this.value)"
+                        id="string" required>
+                    <br>
+                    <p>The reversed string is:</p>
+                    <span id="reversed"></span>
                 </div>
             </section>
         </main>
