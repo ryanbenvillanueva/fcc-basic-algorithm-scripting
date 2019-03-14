@@ -1,4 +1,4 @@
 function convertToF(celsius) {
-    let fahrenheit = (celsius * 9 / 5) + 32;
-    return fahrenheit;
+    document.getElementById("fahrenheit").innerHTML = (celsius * 9 / 5) + 32;
+    
 }
