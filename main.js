@@ -10,3 +10,18 @@ function reverseString(str) {
     reversedStr = reversedArr.join("");
     document.getElementById("reversed").innerHTML = reversedStr;
 }
+
+//Factorialize a Number
+function factorialize(num) {
+    if (num === 0 || num === 1) {
+        return 1;
+    } else {
+        factorial = num * factorialize(num - 1);
+        return factorial;
+    }
+}
+
+document.getElementById("submit").addEventListener("click", function () {
+    num = document.getElementById("numberToFactorialize").value;
+    document.getElementById("factorial").innerHTML = factorialize(num);
+});
