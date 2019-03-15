@@ -85,3 +85,21 @@ document.getElementById("confirmEnding").addEventListener("click", function () {
     target = document.getElementById("target").value;
     document.getElementById("confirmation").innerHTML = confirmEnding(str, target);
 });
+
+function repeatStringNumTimes(str, num) {
+    var repeatStr = "";
+    if (num < 0) {
+      return "";
+    } else {
+      for (let i = num; i > 0; i--) {
+        repeatStr += str; 
+      }
+    }
+    return repeatStr;
+  }
+
+document.getElementById("repeat").addEventListener("click", function () {
+    str = document.getElementById("strToRepeat").value;
+    num = document.getElementById("num").value;
+    document.getElementById("repeatedString").innerHTML = repeatStringNumTimes(str, num);
+});
