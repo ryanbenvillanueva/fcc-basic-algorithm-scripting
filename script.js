@@ -49,21 +49,39 @@ document.getElementById("findLongest").addEventListener("click", function () {
 function largestOfFour(arr) {
     var arrayOfLargest = [];
     for (var i = 0; i < arr.length; i++) {
-      var largest = arr[i][0];
-      for (var j = 0; j < arr[i].length; j++) {
-        if (arr[i][j] > largest) {
-          largest = arr[i][j]; 
+        var largest = arr[i][0];
+        for (var j = 0; j < arr[i].length; j++) {
+            if (arr[i][j] > largest) {
+                largest = arr[i][j];
+            }
         }
-      }
-      arrayOfLargest.push(largest);
+        arrayOfLargest.push(largest);
     }
-    
-    return ('[' + arrayOfLargest + ']');
-  }
-  
-//    largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 
-  document.getElementById("returnLargestNumbers").addEventListener("click", function () {
-    // arr = document.getElementById("arrayGiven").value;
-    document.getElementById("arrayOfLargest").innerHTML = largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+    return ('[' + arrayOfLargest + ']');
+}
+
+document.getElementById("returnLargestNumbers").addEventListener("click", function () {
+    document.getElementById("arrayOfLargest").innerHTML = largestOfFour([
+        [4, 5, 1, 3],
+        [13, 27, 18, 26],
+        [32, 35, 37, 39],
+        [1000, 1001, 857, 1]
+    ]);
+});
+
+function confirmEnding(str, target) {
+    // "Never give up and good luck will find you."
+    // -- Falcor
+    if (str.substring(str.length - target.length) === target) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+document.getElementById("confirmEnding").addEventListener("click", function () {
+    str = document.getElementById("stringToCheck").value;
+    target = document.getElementById("target").value;
+    document.getElementById("confirmation").innerHTML = confirmEnding(str, target);
 });
