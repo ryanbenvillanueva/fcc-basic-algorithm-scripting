@@ -90,14 +90,14 @@ document.getElementById("confirmEnding").addEventListener("click", function () {
 function repeatStringNumTimes(str, num) {
     var repeatStr = "";
     if (num < 0) {
-      return "";
+        return "";
     } else {
-      for (let i = num; i > 0; i--) {
-        repeatStr += str; 
-      }
+        for (let i = num; i > 0; i--) {
+            repeatStr += str;
+        }
     }
     return repeatStr;
-  }
+}
 
 document.getElementById("repeat").addEventListener("click", function () {
     str = document.getElementById("strToRepeat").value;
@@ -109,13 +109,13 @@ document.getElementById("repeat").addEventListener("click", function () {
 function truncateString(str, num) {
     // Clear out that junk in your trunk
     if (str.length > num && num > 3) {
-      return str.slice(0, num) + '...';
+        return str.slice(0, num) + '...';
     } else if (str.length > num && num <= 3) {
-      return str.slice(0, num) + '...';
+        return str.slice(0, num) + '...';
     } else {
-      return str;
-    } 
-  }
+        return str;
+    }
+}
 
 document.getElementById("truncate").addEventListener("click", function () {
     str = document.getElementById("strToTruncate").value;
@@ -126,17 +126,27 @@ document.getElementById("truncate").addEventListener("click", function () {
 // Finders Keepers
 function findElement(arr, func) {
     var trueCount = 0;
-      for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         if (func(arr[i])) {
-          trueCount++;
-          return arr[i];
+            trueCount++;
+            return arr[i];
         }
-      }
-      if (trueCount === 0) {
+    }
+    if (trueCount === 0) {
         return undefined;
-      }
+    }
 }
 
 document.getElementById("findElement").addEventListener("click", function () {
     document.getElementById("found").innerHTML = findElement([1, 2, 3, 4], num => num % 2 === 0);
+});
+
+// BooWho
+function booWho(bool) {
+    // What is the new fad diet for ghost developers? The Boolean.
+    return typeof (bool) === "boolean" ? true : false;
+}
+
+document.getElementById("checkValue").addEventListener("click", function () {
+    document.getElementById("booWhoResult").innerHTML = booWho(null);
 });
