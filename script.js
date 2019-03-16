@@ -150,3 +150,18 @@ function booWho(bool) {
 document.getElementById("checkValue").addEventListener("click", function () {
     document.getElementById("booWhoResult").innerHTML = booWho(null);
 });
+
+// Title case a sentence
+function titleCase(str) {
+    var arrStr = str.toLowerCase().split(' ');
+
+    for (var i = 0; i < arrStr.length; i++) {
+        arrStr[i] = (arrStr[i].charAt(0).toUpperCase() + arrStr[i].slice(1));
+    }
+    return (arrStr.join(" "));
+}
+
+document.getElementById("titleCase").addEventListener("click", function () {
+    str = document.getElementById("strToTitleCase").value;
+    document.getElementById("titledCase").innerHTML = titleCase(str);
+});
