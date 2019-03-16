@@ -122,3 +122,21 @@ document.getElementById("truncate").addEventListener("click", function () {
     num = document.getElementById("maxStringLength").value;
     document.getElementById("truncatedString").innerHTML = truncateString(str, num);
 });
+
+// Finders Keepers
+function findElement(arr, func) {
+    var trueCount = 0;
+      for (let i = 0; i < arr.length; i++) {
+        if (func(arr[i])) {
+          trueCount++;
+          return arr[i];
+        }
+      }
+      if (trueCount === 0) {
+        return undefined;
+      }
+}
+
+document.getElementById("findElement").addEventListener("click", function () {
+    document.getElementById("found").innerHTML = findElement([1, 2, 3, 4], num => num % 2 === 0);
+});
