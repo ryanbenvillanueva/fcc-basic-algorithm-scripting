@@ -86,6 +86,7 @@ document.getElementById("confirmEnding").addEventListener("click", function () {
     document.getElementById("confirmation").innerHTML = confirmEnding(str, target);
 });
 
+// Repeat a String a Number of Times
 function repeatStringNumTimes(str, num) {
     var repeatStr = "";
     if (num < 0) {
@@ -102,4 +103,22 @@ document.getElementById("repeat").addEventListener("click", function () {
     str = document.getElementById("strToRepeat").value;
     num = document.getElementById("num").value;
     document.getElementById("repeatedString").innerHTML = repeatStringNumTimes(str, num);
+});
+
+// Truncate a string
+function truncateString(str, num) {
+    // Clear out that junk in your trunk
+    if (str.length > num && num > 3) {
+      return str.slice(0, num) + '...';
+    } else if (str.length > num && num <= 3) {
+      return str.slice(0, num) + '...';
+    } else {
+      return str;
+    } 
+  }
+
+document.getElementById("truncate").addEventListener("click", function () {
+    str = document.getElementById("strToTruncate").value;
+    num = document.getElementById("maxStringLength").value;
+    document.getElementById("truncatedString").innerHTML = truncateString(str, num);
 });
