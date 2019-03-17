@@ -97,29 +97,35 @@
                     <input class="text-center mx-auto my-0 d-block w-75" type="text" id="strToRepeat" required>
                     <p>How many times do you want it repeated?</p>
                     <input class="text-center mx-auto mx-auto my-0" type="number" id="num" required>
-                    <button class="btn btn-outline-dark btn-sm w-25 mx-auto my-3" type="submit" id="repeat">Repeat the String</button>
+                    <button class="btn btn-outline-dark btn-sm w-25 mx-auto my-3" type="submit" id="repeat">Repeat the
+                        String</button>
                     <span id="repeatedString"></span>
                 </div>
             </section>
             <section class="container text-center" id="truncateAString">
                 <div class="card py-3 mb-3">
                     <h2>Truncate a String</h2>
-                    <p>Truncate a string if it is longer than the given maximum string length. Return the truncated string with a ... ending.</p>
+                    <p>Truncate a string if it is longer than the given maximum string length. Return the truncated
+                        string with a ... ending.</p>
                     <p>Type the string to be truncated:</p>
                     <input class="text-center mx-auto my-0 d-block w-75" type="text" id="strToTruncate" required>
                     <p>What is the maximum string length?</p>
                     <input class="text-center mx-auto mx-auto my-0" type="number" id="maxStringLength" required>
-                    <button class="btn btn-outline-dark btn-sm w-25 mx-auto my-3" type="submit" id="truncate">Truncate the String</button>
+                    <button class="btn btn-outline-dark btn-sm w-25 mx-auto my-3" type="submit" id="truncate">Truncate
+                        the String</button>
                     <span id="truncatedString"></span>
                 </div>
             </section>
             <section class="container text-center" id="findersKeepers">
                 <div class="card py-3 mb-3">
                     <h2>Finders Keepers</h2>
-                    <p>Create a function that looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument). If no element passes the test, return undefined.</p>
+                    <p>Create a function that looks through an array (first argument) and returns the first element in
+                        the array that passes a truth test (second argument). If no element passes the test, return
+                        undefined.</p>
                     <p>The test array and function:</p>
                     <p>[1, 2, 3, 4], num => num % 2 === 0</p>
-                    <button class="btn btn-outline-dark btn-sm w-25 mx-auto my-3" type="submit" id="findElement">Find Element</button>
+                    <button class="btn btn-outline-dark btn-sm w-25 mx-auto my-3" type="submit" id="findElement">Find
+                        Element</button>
                     <span id="found"></span>
                 </div>
             </section>
@@ -128,17 +134,20 @@
                     <h2>Boo Who</h2>
                     <p>Check if a value is classified as a boolean primitive. Return true or false.</p>
                     <p>The test: booWho(null)</p>
-                    <button class="btn btn-outline-dark btn-sm w-25 mx-auto my-3" type="submit" id="checkValue">Check Value</button>
+                    <button class="btn btn-outline-dark btn-sm w-25 mx-auto my-3" type="submit" id="checkValue">Check
+                        Value</button>
                     <span id="booWhoResult"></span>
                 </div>
             </section>
             <section class="container text-center" id="titleCase">
                 <div class="card py-3 mb-3">
                     <h2>Title Case a Sentence</h2>
-                    <p>Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.</p>
+                    <p>Return the provided string with the first letter of each word capitalized. Make sure the rest of
+                        the word is in lower case.</p>
                     <p>Type the sentence to title case:</p>
                     <input class="text-center mx-auto my-0 d-block w-75" type="text" id="strToTitleCase" required>
-                    <button class="btn btn-outline-dark btn-sm w-25 mx-auto my-3" type="submit" id="titleCase">Title Case</button>
+                    <button class="btn btn-outline-dark btn-sm w-25 mx-auto my-3" type="submit" id="titleCase">Title
+                        Case</button>
                     <span id="titledCase"></span>
                 </div>
             </section>
@@ -146,15 +155,28 @@
                 <div class="card py-3 mb-3">
                     <h2>Slice and Splice</h2>
                     <p>You are given two arrays and an index.
-                        Use the array methods slice and splice to copy each element of the first array into the second array, in order. Begin inserting elements at index n of the second array. Return the resulting array. The input arrays should remain the same after the function runs.</p>
+                        Use the array methods slice and splice to copy each element of the first array into the second
+                        array, in order. Begin inserting elements at index n of the second array. Return the resulting
+                        array. The input arrays should remain the same after the function runs.</p>
                     <p>Enter the elements of the first array:</p>
                     <input class="text-center mx-auto my-0 d-block w-75" type="text" id="arr1" required>
                     <p>Enter the elements of the second array:</p>
                     <input class="text-center mx-auto my-0 d-block w-75" type="text" id="arr2" required>
                     <p>What is the index?</p>
                     <input class="text-center mx-auto mx-auto my-0" type="number" id="indexN" required>
-                    <button class="btn btn-outline-dark btn-sm w-25 mx-auto my-3" type="submit" id="returnNewArray">Return New Array</button>
+                    <button class="btn btn-outline-dark btn-sm w-25 mx-auto my-3" type="submit" id="returnNewArray">Return
+                        New Array</button>
                     <span id="newArray"></span>
+                </div>
+            </section>
+            <section class="container text-center" id="falsyBouncer">
+                <div class="card py-3 mb-3">
+                    <h2>Falsy Bouncer</h2>
+                    <p>Remove all falsy values from an array.</p>
+                    <p>The elements of the array:[7, "ate", "", false, 9]</p>
+                    <button class="btn btn-outline-dark btn-sm w-25 mx-auto my-3" type="submit" id="removeFalsy">Remove
+                        Falsy</button>
+                    <span id="allTruthy"></span>
                 </div>
             </section>
         </main>

@@ -186,3 +186,15 @@ document.getElementById("returnNewArray").addEventListener("click", function () 
     n = document.getElementById("indexN").value;
     document.getElementById("newArray").innerHTML = frankenSplice(arr1, arr2, n);
 });
+
+// Falsy Bouncer
+function bouncer(arr) {
+    // Don't show a false ID to this bouncer.
+    return (arr.filter(function (truthy) {
+        return truthy;
+    }));
+
+}
+document.getElementById("removeFalsy").addEventListener("click", function () {
+    document.getElementById("allTruthy").innerHTML = bouncer([7, "ate", "", false, 9]);
+});
