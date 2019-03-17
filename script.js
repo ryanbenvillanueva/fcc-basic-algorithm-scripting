@@ -165,3 +165,24 @@ document.getElementById("titleCase").addEventListener("click", function () {
     str = document.getElementById("strToTitleCase").value;
     document.getElementById("titledCase").innerHTML = titleCase(str);
 });
+
+
+// Slice and splice
+function frankenSplice(arr1, arr2, n) {
+    // It's alive. It's alive!
+    console.log(arr1, arr2, n);
+    let copyArr2 = arr2.slice(0);
+
+    for (let i = 0; i < arr1.length; i++) {
+        copyArr2.splice(n, 0, arr1[i]);
+        n++;
+    }
+    return ("[" + copyArr2 + "]");
+}
+
+document.getElementById("returnNewArray").addEventListener("click", function () {
+    arr1 = document.getElementById("arr1").value.split(",");
+    arr2 = document.getElementById("arr2").value.split(",");
+    n = document.getElementById("indexN").value;
+    document.getElementById("newArray").innerHTML = frankenSplice(arr1, arr2, n);
+});
