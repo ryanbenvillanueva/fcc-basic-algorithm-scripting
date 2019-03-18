@@ -198,3 +198,22 @@ function bouncer(arr) {
 document.getElementById("removeFalsy").addEventListener("click", function () {
     document.getElementById("allTruthy").innerHTML = bouncer([7, "ate", "", false, 9]);
 });
+
+// Where do I belong
+function getIndexToIns(arr, num) {
+    // Find my place in this sorted array.
+    let sortedArr = arr.sort(function (a, b) {
+        return a - b;
+    });
+
+    for (let i = 0; i < sortedArr.length; i++) {
+        if (arr[i] >= num) {
+            return i;
+        }
+    }
+    return sortedArr.length;
+}
+
+document.getElementById("getIndex").addEventListener("click", function () {
+    document.getElementById("indexToInsert").innerHTML = getIndexToIns([10, 20, 30, 40, 50], 35);
+});
