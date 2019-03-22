@@ -5,12 +5,12 @@
     font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
-body > div {
+body>div {
     background-color: #007E00;
 }
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-

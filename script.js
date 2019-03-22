@@ -217,3 +217,27 @@ function getIndexToIns(arr, num) {
 document.getElementById("getIndex").addEventListener("click", function () {
     document.getElementById("indexToInsert").innerHTML = getIndexToIns([10, 20, 30, 40, 50], 35);
 });
+
+// Mutation
+function mutation(arr) {
+    let first = arr[0].toLowerCase();
+    let second = arr[1].toLowerCase();
+
+    let checked = [];
+    for (let i = 0; i < second.length; i++) {
+        if (first.indexOf(second[i]) < 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+document.getElementById("returnResult").addEventListener("click", function () {
+    let arr = [];
+    let first = document.getElementById("first").value;
+    arr.push(first);
+    let second = document.getElementById("second").value;
+    arr.push(second);
+    document.getElementById("mutation").innerHTML = mutation(arr);
+});
